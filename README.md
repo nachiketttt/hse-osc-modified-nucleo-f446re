@@ -122,7 +122,7 @@ void SystemClock_Config(void)
 
 ### SEGGER SystemView recording FreeRTOS at 180 MHz
 - used HAL_GetTick and HAL_Delay to see the time elapsed in 10 seconds
-![segger](img/segger.png)
+![segger](img/time_elapsed.png)
 
 ---
 
