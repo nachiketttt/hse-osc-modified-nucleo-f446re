@@ -24,7 +24,7 @@ Reference schematic: MB1136 Rev C HSE oscillator circuit (X3, C33, C34, R35, R37
 | Ref | Action | Reason |
 |---|---|---|
 | SB50 | Removed (opened) | Disconnects MCO signal from OSC_IN of the nucleo |
-| SB16 | Removed (opened) | Disconnects MCO signal from ST-Link itself |
+| SB16 | Removed (opened) | Disconnects the F446RE's PA8/MCO pin from receiving the ST-Link clock |
 | SB54 | Removed (opened) | Disconnects F446RE OSC_OUT pin from CN7 Morpho connector |
 | SB55 | Removed (by default) | Disconnects F446RE OSC_IN pin from CN7 Morpho connector |
 | R35 | Bridged with solder | Connects crystal to PF0/OSC_IN |
@@ -108,8 +108,8 @@ void SystemClock_Config(void)
 ### Nucleo After Modification
 ![nucleo](img/af(1).jpg)
 
-### SB50 Removed
-![nucleo](img/sb50_af.jpg)
+### SB50 and SB54 Removed
+![nucleo](img/sb50_54.jpg)
 
 ### CubeMX Clock Tree (180 MHz)
 ![clktree](img/clock_tree.png)
