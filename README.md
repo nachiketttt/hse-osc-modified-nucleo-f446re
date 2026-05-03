@@ -2,13 +2,11 @@
 
 Modifying a NUCLEO F446RE (MB1136 Rev C) to run from an external 25 MHz crystal salvaged from an early 2000s Broadcom router board, achieving a stable 180 MHz SYSCLK which is the maximum rated frequency of the STM32F446RE.
 
----
 
 ## Motivation
 
 By default, the NUCLEO F446RE borrows an 8 MHz MCO signal from the onboard ST-Link chip as its HSE source. This introduces a hard dependency on the ST-Link being present. Populating the unpopulated X3 crystal circuit gives the MCU its own clean, independent clock source which is a requirement for USB, high-speed UART, and accurate SAI/I2S audio.
 
----
 
 ## Hardware
 
@@ -18,7 +16,6 @@ By default, the NUCLEO F446RE borrows an 8 MHz MCO signal from the onboard ST-Li
 | 20pF Load Capacitors x2 | Salvaged from same router board |
 | NUCLEO F446RE (MB1136 Rev C) | Target board |
 
----
 
 ## Modifications
 
@@ -35,13 +32,11 @@ Reference schematic: MB1136 Rev C HSE oscillator circuit (X3, C33, C34, R35, R37
 
 > Note: R35/R37 were bridged with solder blobs as 0Ω resistors were unavailable. Electrically identical. A cleaner build would use proper 0Ω 0402 resistors.
 
----
 
 ## Schematic Reference
 
 ![Schematic](img/schematic.png)
 
----
 
 ## Clock Configuration (180 MHz)
 
@@ -98,7 +93,6 @@ void SystemClock_Config(void)
 
 **PLL Math:** 25 MHz ÷ 20 × 288 ÷ 2 = **180 MHz**
 
----
 
 ## Verification
 
