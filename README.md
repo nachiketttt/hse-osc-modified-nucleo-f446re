@@ -106,10 +106,10 @@ void SystemClock_Config(void)
 ![Donor](img/donor_board.jpg)
 
 ### Nucleo Before Modification (X3 empty)
-![nucleo](img/bef.jpg)
+![nucleo](img/bef(1).jpg)
 
 ### Nucleo After Modification
-![nucleo](img/af.jpg)
+![nucleo](img/af(1).jpg)
 
 ### SB50 Removed
 ![nucleo](img/sb50_af.jpg)
