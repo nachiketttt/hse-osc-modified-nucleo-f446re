@@ -19,11 +19,14 @@ By default, the NUCLEO F446RE borrows an 8 MHz MCO signal from the onboard ST-Li
 
 ## Modifications
 
-Reference schematic: MB1136 Rev C HSE oscillator circuit (X3, C33, C34, R35, R37, SB50)
+Reference schematic: MB1136 Rev C HSE oscillator circuit (X3, C33, C34, R35, R37, SB50, SB16, SB54, SB55)
 
 | Ref | Action | Reason |
 |---|---|---|
-| SB50 | Removed (opened) | Disconnects ST-Link MCO from OSC_IN |
+| SB50 | Removed (opened) | Disconnects MCO signal from OSC_IN of the nucleo |
+| SB16 | Removed (opened) | Disconnects MCO signal from ST-Link itself |
+| SB54 | Removed (opened) | Disconnects F446RE OSC_OUT pin from CN7 Morpho connector |
+| SB55 | Removed (by default) | Disconnects F446RE OSC_IN pin from CN7 Morpho connector |
 | R35 | Bridged with solder | Connects crystal to PF0/OSC_IN |
 | R37 | Bridged with solder | Connects crystal to PF1/OSC_OUT |
 | C33 | Populated 20pF | Load capacitor for crystal |
