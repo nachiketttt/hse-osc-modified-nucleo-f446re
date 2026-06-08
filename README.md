@@ -106,7 +106,7 @@ void SystemClock_Config(void)
 ![nucleo](img/bef(1).jpg)
 
 ### Nucleo After Modification
-![nucleo](img/af(1).jpg)
+![nucleo](img/zero.jpg)
 
 ### SB50 and SB54 Removed
 ![nucleo](img/sb50_54.jpg)
